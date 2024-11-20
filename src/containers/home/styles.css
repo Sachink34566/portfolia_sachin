@@ -1,0 +1,87 @@
+.home {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+   
+
+    .home_text-wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        /* flex-direction: column; */
+
+        h1 {
+            color: var(--yellow-theme-main-color);
+            margin: 0px;
+            font-weight: 500;
+            font-size: 6rem;
+            line-height: 10rem;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typingEffectAnimation 2.5s steps(30,end);
+        }
+    }
+    .home_contact_me{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+
+        button {
+            cursor: pointer;
+            padding: 10px 70px;
+            font-size: 2rem;
+            background-color: transparent;
+            color: var(--yellow-theme-main-color);
+            border: 1.5px solid var(--yellow-theme-main-color);
+            border-radius: 4px;
+            font-weight: 500;
+
+            &:hover{
+                background-color: var(--yellow-theme-main-color);
+                color: #000000;
+            }
+        }
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) { /* Large Tablets and Desktops */
+    .home .home_text-wrapper h1 {
+        font-size: 6rem;
+        line-height: 8rem;
+    }
+}
+
+@media (max-width: 992px) { /* Tablets */
+    .home .home_text-wrapper h1 {
+        font-size: 4.5rem;
+        line-height: 6rem;
+    }
+}
+
+@media (max-width: 768px) { /* Large Mobile Devices */
+    .home .home_text-wrapper h1 {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+}
+
+@media (max-width: 576px) { /* Small Mobile Devices */
+    .home .home_text-wrapper h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+}
+@keyframes typingEffectAnimation{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
